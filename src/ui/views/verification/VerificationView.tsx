@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useGetVerificationReport } from '../../../swr/verificationReports/useGetVerificationReport.ts';
 import type { parameter } from '../../../verification/parameters.ts';
+import { CheckStack } from './checks/CheckStack.tsx';
 import { VerdictIndicator } from './VerdictIndicator.tsx';
 import { VerdictPanel } from './VerdictPanel.tsx';
 import { VerificationHeadline } from './VerificationHeadline.tsx';
@@ -48,6 +49,7 @@ export const VerificationView = (): JSX.Element => {
         <VerificationHeadline election={data.election} updatedAt={data.updatedAt} />
         <VerdictIndicator state={data.verdict.state} />
         <VerdictPanel verdict={data.verdict} />
+        <CheckStack checks={data.checks} />
       </div>
       <aside />
     </div>
