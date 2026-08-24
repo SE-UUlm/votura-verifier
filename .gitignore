@@ -1,0 +1,23 @@
+### Dependencies ###
+node_modules
+
+### Build output ###
+dist
+*.tsbuildinfo
+
+### Test output ###
+coverage
+
+### Editors ###
+.vscode
+.idea
+
+### Local environment overrides ###
+*.local
+
+### macOS ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+[Dd]esktop.ini
