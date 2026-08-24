@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useGetVerificationReport } from '../../../swr/verificationReports/useGetVerificationReport.ts';
 import type { parameter } from '../../../verification/parameters.ts';
+import { VerdictIndicator } from './VerdictIndicator.tsx';
 import { VerificationHeadline } from './VerificationHeadline.tsx';
 
 export interface VerificationViewRouteParams extends Record<string, string> {
@@ -44,6 +45,7 @@ export const VerificationView = (): JSX.Element => {
     <div className="mx-auto grid w-full max-w-6xl flex-1 gap-8 px-6 py-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
       <div className="flex flex-col gap-6">
         <VerificationHeadline election={data.election} updatedAt={data.updatedAt} />
+        <VerdictIndicator state={data.verdict.state} />
       </div>
       <aside />
     </div>
