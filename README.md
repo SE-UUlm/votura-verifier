@@ -39,6 +39,44 @@ against fixtures until votura provides the real thing.
 
 See docs/format.md and docs/threat-model.md.
 
+## Running it locally
+
+Needs Node 22.15 or newer.
+
+```
+npm install
+npm start
+```
+
+Runs on http://localhost:5173. The root path redirects to the only report that exists so far.
+
+Checks:
+
+```
+npm run lint
+npm run check-types
+npm run check-format
+npm test
+npm run build
+```
+
+## Where the data comes from
+
+The interface is done, the checking is not. It fetches a finished verification report over HTTP
+and formats it.
+
+- `public/api/verificationReports/` holds those reports. votura publishes no ballot box yet and
+  this service computes nothing yet, so the API is a folder of static files. That is where the
+  `.json` in the route comes from. To point at a real service, change `VITE_API_BASE_URL` and
+  drop the suffix.
+- `fixtures/` is meant for the protocol inputs: ballot box, certificates, announced result.
+  docs/format.md has to define them first. Nothing reads it yet.
+
+All numbers come from the report as published. The browser does not calculate, it only formats.
+
+Not built on purpose: the completeness and correctness arithmetic, and reading a certificate
+file. The upload button is disabled because there is no certificate format yet.
+
 ## License
 
 MIT
