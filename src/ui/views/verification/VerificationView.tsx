@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { useGetVerificationReport } from '../../../swr/verificationReports/useGetVerificationReport.ts';
 import type { parameter } from '../../../verification/parameters.ts';
 import { VerdictIndicator } from './VerdictIndicator.tsx';
+import { VerdictPanel } from './VerdictPanel.tsx';
 import { VerificationHeadline } from './VerificationHeadline.tsx';
 
 export interface VerificationViewRouteParams extends Record<string, string> {
@@ -46,6 +47,7 @@ export const VerificationView = (): JSX.Element => {
       <div className="flex flex-col gap-6">
         <VerificationHeadline election={data.election} updatedAt={data.updatedAt} />
         <VerdictIndicator state={data.verdict.state} />
+        <VerdictPanel verdict={data.verdict} />
       </div>
       <aside />
     </div>
