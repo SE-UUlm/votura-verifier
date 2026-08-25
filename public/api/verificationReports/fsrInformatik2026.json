@@ -1,0 +1,26 @@
+{
+  "id": "fsrInformatik2026",
+  "election": {
+    "id": "fsrInformatik2026",
+    "name": "FSR Informatik: Executive Board Election 2026",
+    "urnPublishedAt": "2026-07-24T00:00:00.000Z",
+    "ballotCount": 1842
+  },
+  "verdict": {
+    "state": "consistentBroadCoverage",
+    "coverageFraction": 0.347
+  },
+  "checks": [
+    {
+      "kind": "completeness",
+      "nature": "statisticalGrows",
+      "status": "passed",
+      "coverage": {
+        "vouchedBallots": 640,
+        "totalBallots": 1842,
+        "fraction": 0.347
+      }
+    }
+  ],
+  "updatedAt": "2026-07-29T14:02:00.000Z"
+}
