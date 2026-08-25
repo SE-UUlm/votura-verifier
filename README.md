@@ -79,4 +79,8 @@ file. The upload button is disabled because there is no certificate format yet.
 
 ## License
 
-MIT
+AGPL-3.0. Anyone who runs a modified copy of this verifier as a network service has to publish
+their changes. For a program whose whole point is that operators run code others can check, that
+obligation is the point rather than a side effect.
+
+Copyright (c) 2026 SE UUlm
