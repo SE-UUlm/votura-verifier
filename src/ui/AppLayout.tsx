@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 import { Outlet } from 'react-router';
+import { AppFooter } from './appFooter/AppFooter.tsx';
 import { AppHeader } from './appHeader/AppHeader.tsx';
 
 export const AppLayout = (): JSX.Element => {
@@ -9,6 +10,7 @@ export const AppLayout = (): JSX.Element => {
       <main className="flex flex-1 flex-col">
         <Outlet />
       </main>
+      <AppFooter />
     </div>
   );
 };
